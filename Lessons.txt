@@ -4,9 +4,38 @@ TypeScript
 
 a programming language which was developed by Microsoft. It is fee, open source and superset of JavaScript. 
 
+
+
+
 Command Lines:
 npm init //to install package.json
 npm tsc -w //to automatically update .ts file to .js file 
+
+npm init
+
+
+TO INSTALL TYPESCRIPT
+npm i typescript --save-dev
+
+
+TO CHECK THE VERSION OF TYPESCRIPT
+npx tsc -v
+
+
+INITIALIZE THE PROJECT AS A TYPESCRIPT PROJECT
+npx tsc --init
+
+
+TO CREATE TRANSPILER
+npx tsc   OR npx tsc -w 
+
+
+INDEX HTML
+<script> var exports = {"__esModule": true}</script>
+<script src="./index.js"></script>
+
+
+
 
 Slides Link: 
 
