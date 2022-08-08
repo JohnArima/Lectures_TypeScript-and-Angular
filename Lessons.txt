@@ -1,0 +1,21 @@
+Day 1
+
+TypeScript
+
+a programming language which was developed by Microsoft. It is fee, open source and superset of JavaScript. 
+
+Command Lines:
+npm init //to install package.json
+npm tsc -w //to automatically update .ts file to .js file 
+
+Slides Link: 
+
+https://slides.com/seijiralphvillafranca/deck-087708#/4/0/2
+
+Github repo link: 
+https://github.com/SeijiV13/typescript-demo
+
+
+
+
+
