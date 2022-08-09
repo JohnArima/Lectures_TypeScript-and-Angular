@@ -38,7 +38,10 @@ if (isbn[0] == 'X' || isbn[1] == 'X' || isbn[2] == 'X' || isbn[3] == 'X' || isbn
 else {
     console.log("True");
 }
-//Test 3
+//Test 3 (The answer is already given)
+const letters = "abcdEefjihgklmnopqrstuvwxyz";
+let s = "Cat30";
+const changer = (s) => s.replace(/[a-z]/g, (c) => letters[letters.indexOf(c.toLowerCase()) + 1]);
 //Test 4
 var array = ["false", "1", "0", "1", "2", "0", "1", "3", "a"];
 let n = array.length;

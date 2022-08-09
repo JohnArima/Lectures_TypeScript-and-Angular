@@ -46,9 +46,11 @@ var isbn: any [] = ["1","1","1","2","2","2","3","3","3","9","X"];
         
     }
     
-//Test 3
+//Test 3 (The answer is already given)
 
-
+const letters = "abcdEefjihgklmnopqrstuvwxyz";
+let s = "Cat30"
+const changer = (s: string) => s.replace(/[a-z]/g, (c: string) => letters[letters.indexOf(c.toLowerCase()) + 1]) 
 
 //Test 4
 
