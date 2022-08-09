@@ -1,0 +1,49 @@
+Angular Framework
+Angular and Angular JS is different
+
+
+
+Prerequisites
+npm install -g @angular/cli
+
+npm i @angular/cli@latest
+
+
+
+check version
+ng version
+
+npm -v
+
+Create your own Project Command
+ng new <project-name>
+
+
+
+Angular Decorators 
+@NgModule - Module
+
+@Component - Component
+
+@Injectable - Service
+
+Shortcut Keys
+
+//Module
+ng g m <module-name>
+
+//Component
+ng g c <component-name>
+
+//Service
+ng g s <Service-name>
+
+
+
+commands
+ng g c blog
+
+ng g c components/pages/blog --dry-run
+
+
+

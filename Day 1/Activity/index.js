@@ -1,5 +1,22 @@
 "use strict";
-//Test 1
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.showDirectory = exports.addDirectory = void 0;
+var list = [];
+const addDirectory = (d1, d2, d3) => {
+    let newDirectory = { city: d1, country: d2, population: d3 };
+    list.push(newDirectory);
+    (0, exports.showDirectory)();
+};
+exports.addDirectory = addDirectory;
+const showDirectory = () => {
+    const tableBody = document.getElementById('table');
+    let dataHtml = '';
+    list.forEach((data) => {
+        dataHtml += '<tr><td>' + data.city + '</td><td>' + data.country + '</td><td>' + data.population + '</td></tr>';
+        tableBody.innerHTML = dataHtml;
+    });
+};
+exports.showDirectory = showDirectory;
 //Test 2
 var isbn = ["1", "1", "1", "2", "2", "2", "3", "3", "3", "9", "X"];
 var total1 = isbn[0] * 1

@@ -1,0 +1,13 @@
+answers for activity 1
+
+//task 4
+var arr = []
+
+moveZeros = (arr) => return arr.filter(x => x !== 0).concat(arr.filter(x => x == 0))
+
+
+
+//task 3
+const letters = "abcdEefjihgklmnopqrstuvwxyz";
+s = "Cat30"
+const changer = s => s.replace(/[a-z]/g, c => letters[letters.indexOf(c.toLowerCase()) + 1]) 

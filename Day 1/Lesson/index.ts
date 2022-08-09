@@ -8,21 +8,23 @@ export const testFunction = () => {
  
  }
  // variables with types
- 
  var parent: any;
  parent = 4;
  parent = "string";
+
  // first (built-in)
  var x: number = 4;
- var y: string = "seiji";
+ var y: string = "Carlo";
  var z: boolean = true;
  testFunction();
+
  // second (user-defined) arrays enums interfaces
  // Arrays
  var nameArray: string[] = [];
  var otherArray = new Array(10);
- nameArray.push("Seiji");
- otherArray.push("John Deo")
+ nameArray.push("Carlo");
+ otherArray.push("John")
+
  //  Enums
  export enum Actions {
      Create,
@@ -30,6 +32,7 @@ export const testFunction = () => {
      Update,
      Delete
  }
+
  // interfaces
  interface Cat {
      name: string;

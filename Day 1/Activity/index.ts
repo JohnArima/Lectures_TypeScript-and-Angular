@@ -1,6 +1,25 @@
 //Test 1
+interface directory {
+    city: string;
+    country: string;
+    population: number;
+}
 
+var list: directory[] = [];
+export const addDirectory = (d1: string, d2: string, d3: number) => {
+    let newDirectory: directory = { city: d1, country: d2, population: d3 }
+    list.push(newDirectory);
+    showDirectory();
+}
 
+export const showDirectory = () => {
+    const tableBody = document.getElementById('table') as HTMLTableElement;
+    let dataHtml = '';
+    list.forEach((data: directory) => {
+        dataHtml += '<tr><td>' + data.city + '</td><td>' + data.country + '</td><td>' + data.population + '</td></tr>';
+        tableBody.innerHTML = dataHtml;
+    })
+}
 
 
 

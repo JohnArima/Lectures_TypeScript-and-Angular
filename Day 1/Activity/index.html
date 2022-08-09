@@ -1,12 +1,34 @@
-<input id="add">
-<button onclick="addCat(document.getElementById('add').value)">
-    Search
-</button>
-<div id="">
+<head>
+    <script>var exports = { "__esModule": true };</script>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <div>
+        <label for="cityName">City Name:</label><br>
+        <input type=text id="cityName"><br>
+        <label for="country">Country:</label><br>
+        <input type="text" id="country" name="country"><br>
+        <label for="population">Population:</label><br>
+        <input type="number" id="population"><br><br>
+        <button onclick="addDirectory(document.getElementById('cityName').value, document.getElementById('country').value,document.getElementById('population').value)">Add</button>
+    </div>
+    <br>
+        <label for="searchInput">Search Input:</label><br>
+        <input type=text id="searchInput" name="searchInput">
+        <!-- unfinished -->
+        <button id="searchbar" onclick="showDirectory(document.getElementById('cityName').value, 
+        document.getElementById('country').value,document.getElementById('population').value)">Search</button>
+    </div>
 
-</div>
-
-
-
-<script>var exports = {"__esModule": true};</script>
-<script src="./index.js"></script>
+    <table>
+        <thead>
+        <tr>
+            <th>City</th>
+            <th>Country</th>
+            <th>Population</th>
+        </tr>
+        </thead>
+        <tbody id="table">
+        </tbody>
+    </table>
+</body>
