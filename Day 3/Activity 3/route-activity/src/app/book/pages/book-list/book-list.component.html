@@ -1,0 +1,8 @@
+<!-- <p>book-list works!</p>
+
+<app-book-item></app-book-item> -->
+
+<br>
+<div *ngFor="let data of books">
+    <app-book-item [book]="data" (actionEmitter)="executeAction($event)"></app-book-item>
+</div>

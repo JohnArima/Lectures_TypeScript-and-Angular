@@ -1,0 +1,35 @@
+
+3 Pillars in Angular (sa folder)
+core
+-single ton sa buong application
+	within core app:
+	-guards
+	-interceptors
+	-services
+modules
+-Logic or Functionality
+-Data or the object itself
+
+
+shared
+-considered as 'DUMB COMPONENTS'
+
+
+
+Pages are called 'Smart Components'
+Components are called 'Presentational/Dumb Components'
+
+
+repo for reference for Activity 3
+https://github.com/SeijiV13/seven-seven-angular-demo
+
+stackblitz:
+https://stackoverflow.com/questions/70293148/how-do-i-open-a-terminal-in-stackblitz-while-working-on-an-angular-project
+
+Coursera:
+https://www.coursera.org/specializations/full-stack-mobile-app-development
+
+Jovanie
+https://github.com/jovan51795/angular-directive/compare/main...jovan51795-patch-1?expand=1
+
+https://github.com/jovan51795/angular-directives

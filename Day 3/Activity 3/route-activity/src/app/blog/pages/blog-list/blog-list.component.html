@@ -1,0 +1,5 @@
+<!-- <p>blog-list works!</p> -->
+<br>
+<div *ngFor="let data of blogs">
+    <app-blog-item [blog]="data" (actionEmitter)="executeAction($event)"></app-blog-item>
+</div>
