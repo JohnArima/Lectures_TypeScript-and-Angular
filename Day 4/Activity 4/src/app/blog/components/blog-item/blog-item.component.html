@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Item</title>
+</head>
+<body>
+     <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Authors</th>
+                <th>ISBN</th>
+                <th>Comments</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{blog?.id}}</td>
+                <td>{{blog?.title}}</td>
+                <td>{{blog?.description}}</td>
+                <td>{{blog?.author}}</td>
+                <td>{{blog?.comments}}</td>
+                <td>
+                        <button mat-raised-button (click)="edit()">Edit</button>
+                        <button  mat-raised-button color="warn" (click)="deleteButton()">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+     
+     <mat-card>
+        <mat-card-title>Simple Card</mat-card-title>
+        <mat-form-field appearance="fill">
+            <mat-label>Legacy form field</mat-label>
+            <input matInput placeholder="Placeholder">
+        </mat-form-field>
+     </mat-card> 
+
+
+     
+</body>
+</html>
