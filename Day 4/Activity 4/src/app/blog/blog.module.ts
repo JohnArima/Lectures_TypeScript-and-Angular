@@ -11,6 +11,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CommandBarComponent } from '../shared/components/command-bar/command-bar.component';
 import {MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { HeaderComponent } from '../shared/components/header/header.component';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -19,7 +22,8 @@ import {MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/mater
   declarations: [
     BlogListComponent,
     BlogItemComponent,
-    CommandBarComponent
+    CommandBarComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +35,9 @@ import {MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/mater
     ReactiveFormsModule,
     MatNativeDateModule,
     FormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   exports: [BlogListComponent],
   providers: [

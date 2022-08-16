@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, NgModule, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, NgModule, OnInit, Output, ViewChild } from '@angular/core';
 import { Blog } from '../../models/blog.interface';
+import { BlogServiceService } from '../../services/blog-service.service';
 @Component({
   selector: 'app-blog-item',
   templateUrl: './blog-item.component.html',
@@ -8,6 +9,7 @@ import { Blog } from '../../models/blog.interface';
 
 
 export class BlogItemComponent implements OnInit {
+
   @Input() blog: {id: number; title: string; description: string; author: string; comments: string[];} | undefined
   @Output() actionEmitter = new EventEmitter<Blog>();
   constructor() {
@@ -24,5 +26,7 @@ export class BlogItemComponent implements OnInit {
   deleteButton(){
     this.actionEmitter.emit(this.blog)
   }
-  
+  displayedColumns: string[] = ['id','title','description','author','comments'];
+  dataElement = elementData;
 }
+const elementData: BlogServiceService[] = []
