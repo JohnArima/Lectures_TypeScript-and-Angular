@@ -12,7 +12,6 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { CommandBarComponent } from '../shared/components/command-bar/command-bar.component';
 import {MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { HeaderComponent } from '../shared/components/header/header.component';
 import {MatIconModule} from '@angular/material/icon';
 
 
@@ -23,7 +22,6 @@ import {MatIconModule} from '@angular/material/icon';
     BlogListComponent,
     BlogItemComponent,
     CommandBarComponent,
-    HeaderComponent
   ],
   imports: [
     CommonModule,

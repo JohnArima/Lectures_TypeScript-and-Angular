@@ -9,7 +9,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
   styleUrls: ['./blog-list.component.scss']
 })
 export class BlogListComponent implements OnInit {
-  blogs: {id: number; title: string; description: string; author: string; comments: string[];}[] = []
+  blogs: {id: number; title: string; description: string; author: string; comments: string[];}[] = [];
+  displayedColumns: string[] = ['title', 'description', 'author'];
 
   constructor(private blogService: BlogServiceService) { 
     this.blogs = this.blogService.getBlog();
