@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Blog } from '../../models/blog.interface';
 import { BlogServiceService } from '../../services/blog-service.service';
-import { MatPaginatorModule } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-blog-list',
@@ -9,7 +8,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
   styleUrls: ['./blog-list.component.scss']
 })
 export class BlogListComponent implements OnInit {
-  blogs: {id: number; title: string; description: string; author: string; comments: string[];}[] = []
+  blogs: {id: number; title: string; description: string; author: string; comments: string[];}[] = [];
+  displayedColumns: string[] = ['id','title', 'description', 'author','comments','actions'];
 
   constructor(private blogService: BlogServiceService) { 
     this.blogs = this.blogService.getBlog();
@@ -17,9 +17,7 @@ export class BlogListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
   executeAction(blog: Blog){
-    console.log(blog.id)
+    console.log(blog?.id)
   }
-
 }

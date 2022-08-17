@@ -11,6 +11,7 @@ export class CommandBarComponent implements OnInit {
   @Input() blog: {id: number; title: string; description: string; author: string; comments: string[];} | undefined
   @Input() book: {id: number; name: string; authors: string[]; isbn: number;} | undefined
   @Output() actionEmitter = new EventEmitter<Blog>();
+  @Output() actionEmitter2 = new EventEmitter<Blog>();
   constructor() { }
 
   ngOnInit(): void {

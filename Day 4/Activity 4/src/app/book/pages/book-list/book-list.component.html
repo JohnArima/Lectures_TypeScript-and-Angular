@@ -1,8 +1,46 @@
-<!-- <p>book-list works!</p>
-
-<app-book-item></app-book-item> -->
-
-<br>
+<!-- <br>
 <div *ngFor="let data of books">
     <app-book-item [book]="data" (actionEmitter)="executeAction($event)"></app-book-item>
-</div>
+</div> -->
+<!-- <p>blog-list works!</p> -->
+<br>
+
+<app-command-bar></app-command-bar>
+<br><br>
+<table mat-table [dataSource]="books" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef> Title </th>
+      <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> Description </th>
+      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="author">
+      <th mat-header-cell *matHeaderCellDef> Author </th>
+      <td mat-cell *matCellDef="let element"> {{element.author}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="comments">
+        <th mat-header-cell *matHeaderCellDef> Comments </th>
+        <td mat-cell *matCellDef="let element"> {{element.comments}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let element"> <app-book-item (actionEmitter)="executeAction($event)"></app-book-item></td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
