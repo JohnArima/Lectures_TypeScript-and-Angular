@@ -26,6 +26,20 @@ export class BlogServiceService {
       description: "Test Description",
       author: "Test Author", 
       comments: ["This is a Test Comment"]
+    },
+    {
+      id: 2,
+      title: "Test Title",
+      description: "Test Description",
+      author: "Test Author", 
+      comments: ["This is a Test Comment"]
+    },
+    {
+      id: 12,
+      title: "Test Title",
+      description: "Test Description",
+      author: "Test Author", 
+      comments: ["This is a Test Comment"]
     }
   ]
   constructor() { }
