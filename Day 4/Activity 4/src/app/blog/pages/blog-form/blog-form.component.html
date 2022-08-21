@@ -1,1 +1,27 @@
-<p>blog-form works!</p>
+<!-- <p>blog-form works!</p> -->
+<h1 mat-dialog-title>Edit Data</h1>
+
+<form [formGroup]= "blogForm" (ngSubmit)= "submit()">
+    <div  class="form-group">
+        <label for= "title">Title</label>
+        <input formControlName="title" type="text" id="title" class="form-control">
+    </div>
+
+    <div  class="form-group">
+        <mat-label for= "description" matInput placeholder= "John Doe">Description</mat-label>
+        <input formControlName="description" type="text" id="description" class="form-control">
+        <button type="button" mat-raised-button>Add</button>
+    </div>
+
+    <div  class="form-group">
+        <label for= "author">Author</label>
+        <input formControlName="author" type="text" id="author" class="form-control">
+    </div>
+    <div  class="form-group">
+        <label for= "comments">Comments</label>
+        <input formArrayName="comments" type="text" id="comments" class="form-control">
+    </div>
+    
+    <button mat-raised-button type="submit">Submit Changes</button>
+    <button mat-raised-button [routerLink]="['/book']">Back</button>
+</form>

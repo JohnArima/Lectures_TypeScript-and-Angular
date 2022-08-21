@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BookListComponent } from './pages/book-list/book-list.component';
 import { BookItemComponent } from './components/book-item/book-item.component';
@@ -12,7 +12,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { BookFormComponent } from './pages/book-form/book-form.component';
 import { BookRoutingModule } from './book-routing.module';
-import { Routes } from '@angular/router';
 import {MatInputModule} from '@angular/material/input';
 import { ComponentsModule } from '../shared/components/components.module';
 import {MatDialogModule} from '@angular/material/dialog';
@@ -20,9 +19,6 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
 
-const routes: Routes =[
-  // {[path]}
-]
 
 @NgModule({
   declarations: [
@@ -56,6 +52,7 @@ const routes: Routes =[
   providers: [
     {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}
   ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 
   
 })

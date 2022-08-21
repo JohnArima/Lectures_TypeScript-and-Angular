@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { BlogListComponent } from './pages/blog-list/blog-list.component';
+import { BlogFormComponent } from './pages/blog-form/blog-form.component';
 
 const routes: Routes = [
   {
@@ -9,8 +10,8 @@ const routes: Routes = [
     component: BlogListComponent
   },
   {
-    path: "blog",
-    loadChildren: () => import("./blog.module").then(m => m.BlogModule)
+    path: "",
+    component: BlogFormComponent
   }
 ]
 

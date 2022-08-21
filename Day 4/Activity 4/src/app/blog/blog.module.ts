@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BlogListComponent } from './pages/blog-list/blog-list.component';
 import { BlogRoutingModule } from './blog-routing.module';
@@ -7,7 +7,7 @@ import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
-import { FormsModule, ReactiveFormsModule, ɵInternalFormsSharedModule } from '@angular/forms';
+import { FormBuilder, FormsModule, ReactiveFormsModule, ɵInternalFormsSharedModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -28,7 +28,6 @@ import { ComponentsModule } from '../shared/components/components.module';
     CommonModule,
     BlogRoutingModule,
     MatCardModule,
-    BrowserAnimationsModule,
     MatButtonModule,
     MatTableModule,
     ReactiveFormsModule,
@@ -43,7 +42,9 @@ import { ComponentsModule } from '../shared/components/components.module';
     BlogListComponent
   ],
   providers: [
+    FormBuilder,
     {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}
-  ]
+  ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class BlogModule { }

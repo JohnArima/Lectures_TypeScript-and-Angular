@@ -17,8 +17,8 @@ export class BookListComponent implements OnInit {
   updatedBook: Subscription | undefined;
   private router: Router | undefined;
 
-  constructor(private blogService: BookServiceService) { 
-    this.books = this.blogService.getBooks();
+  constructor(private bookService: BookServiceService) { 
+    this.books = this.bookService.getBooks();
   }
   
   

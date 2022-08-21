@@ -1,1 +1,22 @@
-<p>form works!</p>
+<div class="container mt-3">
+    <h2>Profile Page</h2>
+    <form class="profileForm" [formGroup]="userFormGroup">
+      <div class="mb-3 mt-3">
+        <label for="email">Email:</label>
+        <input type="email" formControlName="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      </div>
+      <div class="mb-3">
+        <label for="name">Name:</label>
+        <input type="name" formControlName="name" class="form-control" id="name" placeholder="Enter name" name="name">
+      </div>
+      <div class="mb-3">
+        <label for="bio">Bio:</label>
+        <input type="bio" formControlName="bio" class="form-control" id="bio" placeholder="Enter bio" name="bio">
+      </div>
+      <div class="mb-3">
+        <label for="active">Active:</label>
+        <input type="active" formControlName="active" class="form-control" id="active" placeholder="Active or Not Active" name="active">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>

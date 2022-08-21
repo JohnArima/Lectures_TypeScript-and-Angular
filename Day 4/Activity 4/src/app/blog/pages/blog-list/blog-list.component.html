@@ -34,7 +34,8 @@
 
     <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef> Actions </th>
-        <td mat-cell *matCellDef="let element"> <app-blog-item (actionEmitter)="executeAction($event)"></app-blog-item></td>
+        <td mat-cell *matCellDef="let element"> <app-blog-item (editEmitter) = "executeEdit($event)"
+          (deleteEmitter) = "executeDelete($event)" class="app-blog"> </app-blog-item></td>
     </ng-container>
   
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
