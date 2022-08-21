@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, NgModule, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Blog } from '../../models/blog.interface';
 @Component({
   selector: 'app-blog-item',

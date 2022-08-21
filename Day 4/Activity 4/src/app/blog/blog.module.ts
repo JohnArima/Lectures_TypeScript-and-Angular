@@ -12,6 +12,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import {MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { BlogFormComponent } from './pages/blog-form/blog-form.component';
+import { ComponentsModule } from '../shared/components/components.module';
 
 
 
@@ -20,7 +22,7 @@ import {MatIconModule} from '@angular/material/icon';
   declarations: [
     BlogListComponent,
     BlogItemComponent,  
-    BlogItemComponent,
+    BlogFormComponent
   ],
   imports: [
     CommonModule,
@@ -34,9 +36,12 @@ import {MatIconModule} from '@angular/material/icon';
     FormsModule,
     MatFormFieldModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    ComponentsModule
   ],
-  exports: [BlogListComponent],
+  exports: [
+    BlogListComponent
+  ],
   providers: [
     {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}
   ]

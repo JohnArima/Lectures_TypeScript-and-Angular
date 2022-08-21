@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Blog } from 'src/app/blog/models/blog.interface';
-import { Book } from 'src/app/book/models/book.interface';
+
 
 @Component({
   selector: 'app-command-bar',

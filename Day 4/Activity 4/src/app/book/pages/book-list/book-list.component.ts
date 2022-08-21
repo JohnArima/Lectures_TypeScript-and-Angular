@@ -1,4 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { Book } from '../../models/book.interface';
 import { BookServiceService } from '../../services/book-service.service';
 
@@ -8,19 +10,27 @@ import { BookServiceService } from '../../services/book-service.service';
   styleUrls: ['./book-list.component.scss']
 })
 export class BookListComponent implements OnInit {
-  books: {id: number; name: string; authors: string[]; isbn: number;}[] = []
-  displayedColumns: string[] = ['id','name', 'authors', 'isbn'];
+  books: {id: number; name: string; authors: string[]; isbn: string;}[] = []
+  displayedColumns: string[] = ['id','name', 'authors', 'isbn','actions'];
 
-  constructor(private bookService: BookServiceService) {
-    this.books = this.bookService.getBooks();
+  bookId: Book | undefined;
+  updatedBook: Subscription | undefined;
+  private router: Router | undefined;
+
+  constructor(private blogService: BookServiceService) { 
+    this.books = this.blogService.getBooks();
   }
   
   
   ngOnInit(): void {
   }
 
-  executeAction(book: Book){
-    console.log(book.id)
+  executeEdit(book:Book) {
+    console.log(book.id);
+  }
+
+  executeDelete(book:Book) {
+    console.log(book.id);
   }
 
 }
